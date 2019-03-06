@@ -55,6 +55,7 @@
     
   <div class="content" id="list">
     List 
+	Click onsubject. 
   </div>
     
   <div class="content" id="detail">
@@ -76,7 +77,9 @@
           notes: "++id,subject"
       });
       
+	  // Need this for everything
       $(document).ready(function() {
+	  //change 'home' depending on it
         $("#home").show();
         function hideScreens() {
           $(".content").hide();
@@ -106,9 +109,11 @@
               });
           }
           
-          
+          //Anything in "" you need to change 
         $("body").on("click", ".list-note" , function(){
             loadNoteDetail($(this).attr("data-id"));
+			hideScreens();
+			$("#detail").show();
         });
           
           
